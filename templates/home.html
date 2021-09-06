@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<div>
+  <h2>Please enter your text and question below then click submit</h2>
+  <form id="form" onsubmit="return answerFunction(event)">
+    <textarea type="text" class="form__input" name="text" id="text" placeholder="Text" rows="10" cols="100" required></textarea><br>
+    <input type="text" class="form__input" name="question" id="question" placeholder="Question" style="width: 500px;" required><br>
+    <button type="submit" class="button submit-button" style="padding: 5px 10px;">
+        Submit
+    </button>
+  </form>
+  <div class="show-answer">
+  </div>
+</div>
+{% endblock %}
