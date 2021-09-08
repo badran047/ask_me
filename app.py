@@ -8,7 +8,7 @@ from modules.main import auto_qa, nlp_qa
 app = Flask(__name__)
 
 def predict_answer(text, question):
-  answer = nlp_qa(text, question)
+  answer = nlp_qa(question, text)
   return answer
 
 @app.route('/', methods=['GET', 'POST'])
